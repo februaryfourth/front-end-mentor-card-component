@@ -1,0 +1,157 @@
+        html {
+            font-size: 160%;
+        }
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: inherit;
+        }
+        /*variables*/
+        
+        $titleFont: hsl(0, 0%, 100%);
+        $paragraphfont: hsla(0, 0%, 100%, 0.75);
+        $stat-font:hsla(0, 0%, 100%, 0.6);
+        $accent: hsl(277, 64%, 61%);
+        $card-bg:hsl(245, 38%, 15%);
+        $main-bg:hsl(233, 47%, 7%);
+        /*FONT SIZES */
+        
+        h1,
+        h3 {
+            font-family: 'Lexend Deca', sans-serif;
+            font-size: 1rem;
+            text-align: center;
+            color: $titleFont;
+        }
+        
+        p {
+            font-family: 'inter', sans-serif;
+            font-size: 0.6rem;
+            color: $paragraphfont;
+            letter-spacing: 0.04rem;
+            text-align: center;
+        }
+        /*body styles */
+        
+        body {
+            box-sizing: border-box;
+            background-color: $main-bg;
+            height: 100vh;
+        }
+        /* CARD Container */
+        
+        #container {
+            width: 100%;
+            background-color: $card-bg;
+            height: 100vh;
+        }
+        /* Image background */
+        
+        #image__container {
+            height: 35vh;
+            background-color: $accent/1.3;
+            background-image: url("/images/image-header-mobile.jpg"), ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            width: 100%;
+        }
+        /* Card information section */
+        
+        #information__container {
+            background-color: $card-bg;
+            width: 100%;
+            padding: 10% 10%;
+            .information__content {
+                width: 100%;
+                .title__highlight {
+                    color: $accent;
+                }
+                .information__text {
+                    margin-top: 1rem;
+                    line-height: 1rem;
+                }
+            }
+            .information__stats {
+                margin-top: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 9rem;
+                h3 {
+                    text-transform: uppercase;
+                    font-weight: 400;
+                }
+                p {
+                    text-transform: uppercase;
+                    font-size: 0.5rem;
+                    letter-spacing: 0.1rem;
+                    margin-top: 0.2rem;
+                }
+            }
+        }
+        /* RESPONSIVE */
+        /*TABLET */
+        
+        @media screen and (min-width: 426px) {
+            .information__stats {
+                margin-top: 1.5rem;
+                display: flex;
+                flex-direction: row !important;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                height: 100%;
+            }
+        }
+        /*DESKTOP*/
+        
+        @media screen and (min-width: 769px) {
+            h1,
+            h3 {
+                text-align: left;
+            }
+            p {
+                font-size: 0.5rem;
+                text-align: left;
+            }
+            body {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            #container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                min-width: 500px;
+                max-width: 900px;
+                margin: 0 auto;
+                height: 400px;
+            }
+            #image__container {
+                order: 2;
+                width: 50%;
+                height: 100%;
+            }
+            #information__container {
+                order: 1;
+                width: 50%;
+                padding: 0rem 2rem;
+                .information__stats {
+                    height: 100%;
+                    h3 {
+                        font-weight: 400;
+                        font-size: 0.8rem;
+                    }
+                    p {
+                        font-size: 0.4rem;
+                        letter-spacing: 0.1rem;
+                        margin-top: 0.2rem;
+                    }
+                }
+            }
+        }
