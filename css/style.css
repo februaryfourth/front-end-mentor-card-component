@@ -38,7 +38,7 @@ body {
 #image__container {
   height: 35vh;
   background-color: #8347a8;
-  background-image: url("/images/image-header-mobile.jpg");
+  background-image: url("images/image-header-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
